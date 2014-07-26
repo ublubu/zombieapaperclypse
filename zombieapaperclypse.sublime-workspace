@@ -1,0 +1,647 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"collec",
+				"collectionName"
+			],
+			[
+				"collectionRegis",
+				"collectionRegistrar"
+			],
+			[
+				"testTr",
+				"testTriggerJoin"
+			],
+			[
+				"trig",
+				"triggerJoin"
+			],
+			[
+				"heroArtic",
+				"heroArticlesForAlsoSee"
+			],
+			[
+				"setTransition",
+				"setTransitionDurationAndEasing"
+			],
+			[
+				"tagsN",
+				"tagsNavBarLineHeight"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"installpack",
+				"Package Control: Install Package"
+			],
+			[
+				"pretty ",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/kynan_000/Documents/Cap2Ctrl.ahk",
+		"/C/msys64/home/kynan_000/.bash_profile",
+		"/C/Source/scrolljump/physics.js",
+		"/C/Source/scrolljump/ticker.js",
+		"/C/Source/scrolljump/physics-render.js",
+		"/C/Source/scrolljump/render.js",
+		"/C/Source/scrolljump/derp.js",
+		"/C/Source/scrolljump/physics-box.js",
+		"/C/Source/scrolljump/paintutils.js",
+		"/C/Users/kynan_000/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/kynan_000/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Source/scrolljump/vectormath.js",
+		"/C/Source/p2.js/examples/canvas/character.html",
+		"/C/Source/scrolljump/p2.js",
+		"/C/Source/scrolljump/input.js",
+		"/C/Source/scrolljump/scrolljump.sublime-project",
+		"/C/Source/scrolljump/.gitignore",
+		"/C/Source/scrolljump/motionresolver.js",
+		"/Users/kynan/Source/scrolljump/scrolljump.sublime-project",
+		"/Users/kynan/Source/scrolljump/functipede.js",
+		"/Users/kynan/Source/Forked/yosaic/styles/scss/app.scss",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-tags-navbar-view.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-transition-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-main-view.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/extra-array-extras.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/controller-data-tasks.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-article-view.js",
+		"/Users/kynan/Source/Forked/yosaic/screenshots/test_descriptor.json/arrow-run_a_test-1.html",
+		"/Users/kynan/Source/Forked/yosaic/controllers/article-route-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/perf/layout-stress-test.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/perf/layout.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/shared/article-layout-manager.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/tags-navbar-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/tags/navbar.dust",
+		"/Users/kynan/Source/Forked/yosaic/utils/configger.js",
+		"/Users/kynan/Source/Forked/yosaic/data/yosaic.ad.cpe.food.json",
+		"/Users/kynan/Source/Forked/yosaic/data/yosaic.ad.cpe.tech.json",
+		"/Users/kynan/Source/Forked/yosaic/data/yosaic.ad.cpe.travel.json",
+		"/Users/kynan/Source/Forked/yosaic/screwdriver/config.json",
+		"/Users/kynan/Source/Forked/yosaic/tests/unit/controllers/rss-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/unit/controllers/app-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/transition-default-animation.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/transition-helper.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-app.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/tagged-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/tags/follow_button.dust",
+		"/Users/kynan/Source/Forked/yosaic/templates/tags/follow_buttons.dust",
+		"/Users/kynan/Source/Forked/yosaic/public/js/dust-partials.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/transition-ios-animation.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/article/trailing_applet.dust",
+		"/Users/kynan/Source/Forked/yosaic/arrow-target/arrow-report/timeReport.json",
+		"/Users/kynan/Source/Forked/yosaic/templates/main.dust",
+		"/Users/kynan/Source/Forked/yosaic/templates/mosaic.dust",
+		"/Users/kynan/Source/Forked/yosaic/middleware/magazine-role.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/mocks/mock-yosaic-store-error.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/mocks/articles/article-with-image.json",
+		"/Users/kynan/Source/Forked/yosaic/middleware/bouncer-authentication.js",
+		"/Users/kynan/Source/Forked/yosaic/utils/controller-helper.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/tiles/types/click_overlay.dust",
+		"/Users/kynan/Source/Forked/yosaic/configs/canonical.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-photoset-article-view.js",
+		"/Users/kynan/Source/Forked/yosaic/package.json",
+		"/Users/kynan/Source/Forked/yosaic/configs/magazines.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/models/yosaic-cover.js",
+		"/Users/kynan/Source/Forked/yosaic/styles/magazine-scss.dust",
+		"/Users/kynan/Source/Forked/yosaic/styles/scss/_typography.scss",
+		"/Users/kynan/Source/Forked/yosaic/templates/article/share_buttons.dust",
+		"/Users/kynan/Source/Forked/yosaic/configs/arrow-dimensions.json",
+		"/Users/kynan/Source/Forked/yosaic/grunt/tasks/build-configs.js",
+		"/Users/kynan/Source/Forked/yosaic/configs/magazines-ycb.json",
+		"/Users/kynan/Source/Forked/yosaic/configs/magazines-dimensions.json",
+		"/Users/kynan/Source/Forked/yosaic/templates/widgets/follow_buttons.dust",
+		"/Users/kynan/Source/Forked/yosaic/templates/tags/tag_links.dust",
+		"/Users/kynan/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/kynan/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/kynan/Source/Forked/yosaic/configs/shared-config.json",
+		"/Users/kynan/Source/Forked/yosaic/stores/store-helper.js",
+		"/Users/kynan/Source/Forked/yosaic/configs/scss.json",
+		"/Users/kynan/Source/Forked/yosaic/public/js/models/yosaic-tag.js",
+		"/Users/kynan/Source/Forked/yosaic/stores/output_processors/helpers/index.js",
+		"/Users/kynan/Source/Forked/yosaic/styles/scss/icons.scss",
+		"/Users/kynan/Source/Forked/yosaic/public/js/font-listener.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/layouts/footer.dust",
+		"/Users/kynan/Source/Forked/yosaic/public/js/transition-no-animation.js",
+		"/Users/kynan/Source/Forked/yosaic/nodemon.json",
+		"/Users/kynan/Source/Forked/yosaic/styles/scss/tile.scss",
+		"/Users/kynan/Source/Forked/yosaic/controllers/article-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/home-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/manhattan-configs/gh-templates/configs/shared-config.json",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-tagged-view.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/article/media/desktop_horizontal.dust",
+		"/Users/kynan/Source/Forked/yosaic/templates/article/ad_items.dust",
+		"/Users/kynan/Source/Forked/yosaic/app.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/author-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/rss/rss.dust",
+		"/Users/kynan/Source/Forked/yosaic/controllers/rss-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/article/ad_sidebar.dust",
+		"/Users/kynan/Source/Forked/yosaic/stores/output_processors/yosaic.magazine.article.js",
+		"/Users/kynan/Source/Forked/yosaic/stores/output_processors/yosaic.magazine.cover.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/mosaic-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/stores/yosaic-store.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-home-view.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/models/yosaic-articles.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-tagged-header-view.js",
+		"/Users/kynan/Source/Forked/yosaic/stores/output_processors/yosaic.magazine.tag.js",
+		"/Users/kynan/Source/Forked/yosaic/stores/output_processors/yosaic.magazine.tag.page.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/unit/controllers/tagged-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/article/tags.dust",
+		"/Users/kynan/Source/Forked/yosaic/templates/tagged_header.dust",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-throbber.js",
+		"/Users/kynan/Source/Forked/yosaic/stores/output_processors/yosaic.apt.yac.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/shared/dust-build-path-helpers.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-ie-compat.js",
+		"/Users/kynan/Source/Forked/yosaic/yosaic.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/article/right_sidebar.dust",
+		"/Users/kynan/Source/Forked/yosaic/utils/req-cache.js",
+		"/Users/kynan/Source/Forked/yosaic/templates/header.dust",
+		"/Users/kynan/Source/Forked/yosaic/tests/mocks/mock-apt-data.json",
+		"/Users/kynan/Source/Forked/yosaic/controllers/error-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/configs/routes.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/proxy-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/controllers/app-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/README.md",
+		"/Users/kynan/Source/Forked/yosaic/yosaic.sublime-project",
+		"/Users/kynan/Source/Forked/yosaic/public/js/yosaic-router.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/unit-client/public/js/yosaic-router.js",
+		"/Users/kynan/Source/Forked/yosaic/tests/unit/controllers/article-route-controller.js",
+		"/Users/kynan/Source/Forked/yosaic/public/js/shared/layouters/hero-row-layouter.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"*.js, *.dust, *.html, *.scss",
+			"*.js, *.dust, *.html, *.scss, *.json",
+			"*.js, *.dust, *.html, *.scss",
+			"*.js, *.dust, *.html, *.scss, *.json",
+			"*.js *.dust *.html *.scss",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"shift",
+			"color",
+			"context",
+			"collection",
+			"bodies",
+			"damping",
+			"_.assign",
+			"_.merge",
+			"collection",
+			"world",
+			"assign",
+			"_.merge",
+			"Flow",
+			"flow",
+			"theme",
+			"Y.Array.some",
+			"indexof",
+			"indexOf",
+			"heroArticles",
+			"heroArticlesforAlsoSee",
+			"ArticleView",
+			"heroSidebarArticles",
+			"heroItemsForAlsoSee",
+			"heroSidebarArticles",
+			"ArticleLayoutManager",
+			"1280",
+			"adData",
+			"buildalsoseedata",
+			"alsoseedata",
+			"sponsored",
+			"sponsoredTag",
+			"sponsored-tag",
+			"tagNavBarFontSize",
+			"opacity",
+			"travel",
+			"alert",
+			"twitterId",
+			"'transitions'",
+			"app-transitions",
+			"app-transitions-css",
+			"a {",
+			"i ",
+			"more-icon",
+			"followBackgroundColor",
+			"ckgroundColor",
+			"#ffffff",
+			" button ",
+			"button",
+			"Y.one(Y.config.win).get('",
+			".win",
+			"Y.conf.win",
+			"tagsnavbar-follow-button",
+			".hidden",
+			"baseconfig",
+			"overflowlinks",
+			"baseConfig",
+			"customfontsrc",
+			"twitterId",
+			"YahooFood",
+			"filteredHeroItemGroups",
+			"tagList",
+			"$tilePaddingBottom",
+			"padding-bottom",
+			"tagList",
+			"Min_Tiles_to_show_tag",
+			"req.context.magazines",
+			"postProcessArticles",
+			"currentlySponsored",
+			"mainArticle.Tags",
+			"mainArticle",
+			"\"top\":",
+			"heroArticles",
+			"heroitemsforalsosee",
+			"heroitemsforalsossee",
+			"topData",
+			"alsoseedata",
+			"top",
+			"getUrlBase",
+			"initPersistedElements",
+			"sizeHeroItemImages",
+			"buildRoutableUrl",
+			"data-routable-url",
+			"getRightRailMeasurements",
+			"self",
+			"wrapperHEight",
+			"rightSidebarEl.getY()",
+			"measureRightRail",
+			"decorateFeaturedTags",
+			"slug:",
+			"slug = ",
+			"slug =",
+			"buildRoutableUrl",
+			"geturlbase",
+			"getBaseURl",
+			"taggedController",
+			"slug",
+			"BuildRoutableURl",
+			"rgn-article",
+			"articleRegion",
+			"composite",
+			"render",
+			"data-routable-url",
+			"Y.Global.Fire",
+			"obj_type",
+			"movie:",
+			"articleController",
+			"article-controller",
+			"proxyController",
+			".errorCode",
+			"App.Cache.error",
+			"window.history",
+			"uh-underlay",
+			"alsoSee"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Predecessor",
+			"predecessor",
+			"Predecessor",
+			"predecessor",
+			"some",
+			"this",
+			"measurements.targetHeight",
+			"rightSidebarY"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "zombieapaperclypse.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"configger",
+				"utils/configger.js"
+			],
+			[
+				"array-extra",
+				"public/js/extra-array-extras.js"
+			],
+			[
+				"layout-manager",
+				"public/js/shared/article-layout-manager.js"
+			],
+			[
+				"navbar-view",
+				"public/js/yosaic-tags-navbar-view.js"
+			],
+			[
+				"article-layout",
+				"public/js/shared/article-layout-manager.js"
+			],
+			[
+				"transition-contro",
+				"public/js/yosaic-transition-controller.js"
+			],
+			[
+				"yosaic-app",
+				"public/js/yosaic-app.js"
+			],
+			[
+				"transition-help",
+				"public/js/transition-helper.js"
+			],
+			[
+				"transition",
+				"public/js/transition-default-animation.js"
+			],
+			[
+				"controller-data",
+				"controllers/controller-data-tasks.js"
+			],
+			[
+				"partials.js",
+				"public/js/dust-partials.js"
+			],
+			[
+				"ycb",
+				"configs/magazines-ycb.json"
+			],
+			[
+				"styles/app.scss",
+				"styles/scss/app.scss"
+			],
+			[
+				"app.scss",
+				"styles/scss/app.scss"
+			],
+			[
+				"configs/magazi",
+				"configs/magazines.js"
+			],
+			[
+				"yosaic-tags-navbar-view.js",
+				"public/js/yosaic-tags-navbar-view.js"
+			],
+			[
+				"yosaic-app.js",
+				"public/js/yosaic-app.js"
+			],
+			[
+				"share_but",
+				"templates/article/share_buttons.dust"
+			],
+			[
+				"follow",
+				"templates/widgets/follow_buttons.dust"
+			],
+			[
+				"tag_links",
+				"templates/tags/tag_links.dust"
+			],
+			[
+				"navbar.dust",
+				"templates/tags/navbar.dust"
+			],
+			[
+				"article-layout-manag",
+				"public/js/shared/article-layout-manager.js"
+			],
+			[
+				"index.js",
+				"stores/output_processors/helpers/index.js"
+			],
+			[
+				"tagged-controller",
+				"controllers/tagged-controller.js"
+			],
+			[
+				"yosaic-tags-navb",
+				"public/js/yosaic-tags-navbar-view.js"
+			],
+			[
+				"article-laout",
+				"public/js/shared/article-layout-manager.js"
+			],
+			[
+				"rss-contr",
+				"controllers/rss-controller.js"
+			],
+			[
+				"article-view",
+				"public/js/yosaic-article-view.js"
+			],
+			[
+				"tasks",
+				"controllers/controller-data-tasks.js"
+			],
+			[
+				"yosaic-articles",
+				"public/js/models/yosaic-articles.js"
+			],
+			[
+				"yosaicstore",
+				"stores/yosaic-store.js"
+			],
+			[
+				"tag",
+				"public/js/models/yosaic-tag.js"
+			],
+			[
+				"tagged-view",
+				"public/js/yosaic-tagged-view.js"
+			],
+			[
+				"home-c",
+				"controllers/home-controller.js"
+			],
+			[
+				"author-contro",
+				"controllers/author-controller.js"
+			],
+			[
+				"yosaic-article",
+				"public/js/yosaic-article-view.js"
+			],
+			[
+				"rss-con",
+				"controllers/rss-controller.js"
+			],
+			[
+				"home-contro",
+				"controllers/home-controller.js"
+			],
+			[
+				"main.dust",
+				"templates/main.dust"
+			],
+			[
+				"tagged-c",
+				"controllers/tagged-controller.js"
+			],
+			[
+				"req-cache",
+				"utils/req-cache.js"
+			],
+			[
+				"article-layout-manager",
+				"public/js/shared/article-layout-manager.js"
+			],
+			[
+				"footer.dust",
+				"templates/layouts/footer.dust"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "C:\\Users\\kynan_000\\AppData\\Roaming\\Sublime Text 3\\Packages"
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 184.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
