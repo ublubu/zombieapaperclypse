@@ -25,7 +25,7 @@ initResources vs = do
 
     let vertices = vs
         numVertices = length vertices
-   
+
     vertexBuffer <- genObjectName
     bindBuffer ArrayBuffer $= Just vertexBuffer
     withArray vs $ \ptr -> do
@@ -37,8 +37,8 @@ initResources vs = do
     vertexAttribPointer vPosition $=
         (ToFloat, VertexArrayDescriptor 2 Float 0 (bufferOffset firstIndex))
     vertexAttribArray vPosition $= Enabled
-    
-    
+
+
     let rgba = [GL.Color4  (1.0)  0.0   0.0   1.0,
                 GL.Color4  (0.0) (1.0)  0.0   1.0,
                 GL.Color4   0.0  (0.0)  1.0   1.0] :: [Color4 GLfloat]
@@ -47,8 +47,8 @@ initResources vs = do
     bindBuffer ArrayBuffer $= Just colorBuffer
     withArray rgba $ \ptr -> do
         let size = fromIntegral (numVertices * sizeOf (head rgba))
-        bufferData ArrayBuffer $= (size, ptr, StaticDraw)    
-    
+        bufferData ArrayBuffer $= (size, ptr, StaticDraw)
+
     let firstIndex = 0
         vertexColor = AttribLocation 1
     vertexAttribPointer vertexColor $=
@@ -59,11 +59,11 @@ initResources vs = do
         ShaderInfo VertexShader (FileSource "Shaders/triangles.vert"),
         ShaderInfo FragmentShader (FileSource "Shaders/triangles.frac")]
     currentProgram $= Just program
-    
+
     return $ Descriptor triangles firstIndex (fromIntegral numVertices)
 
 
-keyPressed :: GLFW.KeyCallback 
+keyPressed :: GLFW.KeyCallback
 keyPressed win GLFW.Key'Escape _ GLFW.KeyState'Pressed _ = shutdown win
 keyPressed _   _               _ _                     _ = return ()
 
@@ -89,6 +89,10 @@ createWindow :: String -> (Int, Int) -> IO GLFW.Window
 createWindow title (sizex,sizey) = do
     GLFW.init
     GLFW.defaultWindowHints
+    GLFW.windowHint $ GLFW.WindowHint'ContextVersionMajor 4
+    GLFW.windowHint $ GLFW.WindowHint'ContextVersionMinor 1
+    GLFW.windowHint $ GLFW.WindowHint'OpenGLForwardCompat True
+    GLFW.windowHint $ GLFW.WindowHint'OpenGLProfile GLFW.OpenGLProfile'Core
     Just win <- GLFW.createWindow sizex sizey title Nothing Nothing
     GLFW.makeContextCurrent (Just win)
     GLFW.setWindowSizeCallback win (Just resizeWindow)
