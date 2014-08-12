@@ -57,6 +57,16 @@ initResources = do
 
     let firstIndex = 0
         vPosition = GL.AttribLocation 0
+    --   void glVertexAttribPointer(  GLuint index,
+    --        GLint size,
+    --        GLenum type,
+    --        GLboolean normalized,
+    --        GLsizei stride,
+    --        const GLvoid * pointer);
+    --
+    -- glVertexAttribPointer (0, 2, GL_FLOAT, GL_FALSE, 0, NULL)
+    --
+    -- VertexArrayDescriptor !NumComponents !DataType !Stride !(Ptr a)
     GL.vertexAttribPointer vPosition $=
         (GL.ToFloat, GL.VertexArrayDescriptor 2 GL.Float 0 (bufferOffset firstIndex))
     GL.vertexAttribArray vPosition $= GL.Enabled -- glEnableVertexAttribArray (0)
@@ -68,6 +78,7 @@ initResources = do
     program <- Shaders.loadShaders [
         Shaders.ShaderInfo GL.VertexShader (Shaders.FileSource "blu.vert"),
         Shaders.ShaderInfo GL.FragmentShader (Shaders.FileSource "blu.frag")]
+    GL.currentProgram $= Just program
 
     return $ VaoDescriptor triangles firstIndex (fromIntegral numVertices)
 
@@ -81,13 +92,16 @@ main = do
     GLFW.windowHint $ GLFW.WindowHint'OpenGLProfile GLFW.OpenGLProfile'Core
     Just win <- GLFW.createWindow 640 480 "GLFW Demo" Nothing Nothing
     GLFW.makeContextCurrent (Just win)
-    onDisplay win
+    descriptor <- initResources
+    onDisplay win descriptor
     GLFW.destroyWindow win
     GLFW.terminate
 
-onDisplay :: GLFW.Window -> IO ()
-onDisplay win = do
+onDisplay :: GLFW.Window -> VaoDescriptor -> IO ()
+onDisplay win descriptor@(VaoDescriptor triangles firstIndex numVertices) = do
     GL.clearColor $= GL.Color4 1 0 0 1
     GL.clear [GL.ColorBuffer]
+    GL.bindVertexArrayObject $= Just triangles
+    GL.drawArrays GL.Triangles firstIndex numVertices
     GLFW.swapBuffers win
-    onDisplay win
+    onDisplay win descriptor
