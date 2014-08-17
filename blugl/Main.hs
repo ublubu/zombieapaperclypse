@@ -16,10 +16,13 @@ import qualified Foreign.Ptr as Ptr
 import qualified Foreign.Storable as Stor
 
 data VaoDescriptor = VaoDescriptor GL.VertexArrayObject GL.ArrayIndex GL.NumArrayIndices
+data ShaderDescriptor = SimpleShaderDescriptor GL.Program GL.UniformLocation
+data ResourcesDescriptor = ResourcesDescriptor ShaderDescriptor VaoDescriptor
+
 bufferOffset :: Integral a => a -> Ptr.Ptr b
 bufferOffset = Ptr.plusPtr Ptr.nullPtr . fromIntegral
 
-initResources :: IO VaoDescriptor
+initResources :: IO ResourcesDescriptor
 initResources = do
 
     let vertices = [
@@ -78,9 +81,11 @@ initResources = do
     program <- Shaders.loadShaders [
         Shaders.ShaderInfo GL.VertexShader (Shaders.FileSource "blu.vert"),
         Shaders.ShaderInfo GL.FragmentShader (Shaders.FileSource "blu.frag")]
-    GL.currentProgram $= Just program
+    inputColorUniformLocation <- GL.get $ GL.uniformLocation program "inputColor"
 
-    return $ VaoDescriptor triangles firstIndex (fromIntegral numVertices)
+    return $ ResourcesDescriptor
+        (SimpleShaderDescriptor program inputColorUniformLocation)
+        (VaoDescriptor triangles firstIndex (fromIntegral numVertices))
 
 main :: IO ()
 main = do
@@ -97,11 +102,23 @@ main = do
     GLFW.destroyWindow win
     GLFW.terminate
 
-onDisplay :: GLFW.Window -> VaoDescriptor -> IO ()
-onDisplay win descriptor@(VaoDescriptor triangles firstIndex numVertices) = do
-    GL.clearColor $= GL.Color4 1 0 0 1
-    GL.clear [GL.ColorBuffer]
+drawVao :: VaoDescriptor -> IO ()
+drawVao descriptor@(VaoDescriptor triangles firstIndex numVertices) = do
     GL.bindVertexArrayObject $= Just triangles
     GL.drawArrays GL.Triangles firstIndex numVertices
+
+useShader :: ShaderDescriptor -> IO ()
+useShader descriptor@(SimpleShaderDescriptor program inputColorLocation) = do
+    GL.currentProgram $= Just program
+    GL.uniform inputColorLocation $= (GL.Color4 0 1 0 1 :: GL.Color4 GL.GLclampf)
+
+onDisplay :: GLFW.Window -> ResourcesDescriptor -> IO ()
+onDisplay win descriptor@(ResourcesDescriptor shader vao) = do
+    GL.clearColor $= GL.Color4 1 0 0 1
+    GL.clear [GL.ColorBuffer]
+    useShader shader
+    drawVao vao
     GLFW.swapBuffers win
-    onDisplay win descriptor
+    forever $ do
+        GLFW.pollEvents
+        onDisplay win descriptor
