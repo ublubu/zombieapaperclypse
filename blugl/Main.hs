@@ -25,14 +25,22 @@ bufferOffset = Ptr.plusPtr Ptr.nullPtr . fromIntegral
 initResources :: IO ResourcesDescriptor
 initResources = do
 
+    triangles <- GL.genObjectName -- glGenVertexArrays (1, &vao)
+    GL.bindVertexArrayObject $= Just triangles -- glBindVertexArray (vao)
+
     let vertices = [
             GL.Vertex2 (-0.90) (-0.90), -- first triangle
             GL.Vertex2 0.85 (-0.90),
-            GL.Vertex2 (-0.90) 0.85,
-            GL.Vertex2 0.90 (-0.85), -- second triangle
-            GL.Vertex2 0.90 0.90,
-            GL.Vertex2 (-0.85) 0.90 ] :: [GL.Vertex2 GL.GLfloat]
+            GL.Vertex2 (-0.90) 0.85 ] :: [GL.Vertex2 GL.GLfloat]
+        vertexColors = [
+            GL.Color4 1 0 0 1,
+            GL.Color4 0 1 0 1,
+            GL.Color4 0 0 1 1 ] :: [GL.Color4 GL.GLfloat]
         numVertices = length vertices
+
+        firstIndex = 0
+        vPosition = GL.AttribLocation 0
+        vColor = GL.AttribLocation 1
 
     ----
     -- Bind an array buffer (vertex buffer object) and copy the vertices into it.
@@ -55,11 +63,6 @@ initResources = do
     --     used as input variables to vertex shaders.
     ----
 
-    triangles <- GL.genObjectName -- glGenVertexArrays (1, &vao)
-    GL.bindVertexArrayObject $= Just triangles -- glBindVertexArray (vao)
-
-    let firstIndex = 0
-        vPosition = GL.AttribLocation 0
     --   void glVertexAttribPointer(  GLuint index,
     --        GLint size,
     --        GLenum type,
@@ -73,6 +76,18 @@ initResources = do
     GL.vertexAttribPointer vPosition $=
         (GL.ToFloat, GL.VertexArrayDescriptor 2 GL.Float 0 (bufferOffset firstIndex))
     GL.vertexAttribArray vPosition $= GL.Enabled -- glEnableVertexAttribArray (0)
+
+    ----
+    -- Same thing with the color buffer:
+    ----
+    colorBuffer <- GL.genObjectName
+    GL.bindBuffer GL.ArrayBuffer $= Just colorBuffer
+    Arr.withArray vertexColors $ \ptr -> do
+        let size = fromIntegral (numVertices * Stor.sizeOf (head vertexColors))
+        GL.bufferData GL.ArrayBuffer $= (size, ptr, GL.StaticDraw)
+    GL.vertexAttribPointer vColor $=
+        (GL.ToFloat, GL.VertexArrayDescriptor 4 GL.Float 0 (bufferOffset firstIndex))
+    GL.vertexAttribArray vColor $= GL.Enabled
 
     ----
     -- Load shader program
@@ -110,7 +125,7 @@ drawVao descriptor@(VaoDescriptor triangles firstIndex numVertices) = do
 useShader :: ShaderDescriptor -> IO ()
 useShader descriptor@(SimpleShaderDescriptor program inputColorLocation) = do
     GL.currentProgram $= Just program
-    GL.uniform inputColorLocation $= (GL.Color4 0 1 0 1 :: GL.Color4 GL.GLclampf)
+    GL.uniform inputColorLocation $= (GL.Color4 0 (-0.4) 0 1 :: GL.Color4 GL.GLfloat)
 
 onDisplay :: GLFW.Window -> ResourcesDescriptor -> IO ()
 onDisplay win descriptor@(ResourcesDescriptor shader vao) = do
